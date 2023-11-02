@@ -61,13 +61,12 @@ def add_time(initial_time,added_time,week_day=''):
 
     result = f"{hr}:{mn} {period}"
 
-    week_days = ['SUNDAY','MONDAY','TUESDAY','WEDNESDAY','THURSDAY','FRIDAY','SATURDAY']
+    week_days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
     # if week day is provided then will print it
     if len(week_day)!=0:
-        day_index=int((week_days.index(week_day.upper())+days)%7)
+        day_index=int((week_days.index(week_day.capitalize())+days)%7)
         result+=f", {week_days[day_index]}"
-
-    # printing total days 
+        
     if days==1:
         result+=f" (next day)"
     elif days>1:
