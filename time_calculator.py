@@ -53,7 +53,10 @@ def add_time(initial_time,added_time,week_day=''):
     if hr==0:
         hr=12
 
-
+    # formatting minutes
+    if mn<10:
+        mn='0'+str(mn)
+    
     result = f'{hr}:{mn} {period}'
 
     week_days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
